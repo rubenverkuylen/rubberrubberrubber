@@ -198,3 +198,18 @@ body {
 .hide {
   display: none;
 }
+
+@media screen and (max-width: 840px) {
+  #container-header {
+    display: none;
+  }
+  #container-content {
+    flex-direction: column;
+  }
+  .section {
+    width: 100vw;
+  }
+  .section a {
+    font-size: 1.2em;
+  }
+}
