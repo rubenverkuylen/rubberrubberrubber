@@ -1,0 +1,200 @@
+/* reset/normalizer by https://piccalil.li/blog/a-modern-css-reset/ */
+@import url("https://fonts.googleapis.com/css2?family=Gilda+Display&family=Gothic+A1:wght@200;300;400;500&display=swap");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: "Gilda Display", Helvetica, sans-serif;
+  background-color: antiquewhite;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  /* background-color: aqua; */
+  width: 100vw;
+  height: 100vh;
+}
+
+#container-header {
+  /* background-color: grey; */
+}
+
+#container-content {
+  display: flex;
+  /* background-color: darkgrey; */
+  /* flex-direction: row; */
+}
+
+.main-item {
+  flex: 1 1 0px;
+  transition: ease-in-out 0.2s;
+}
+
+.grow {
+  flex: 4 1 0px !important;
+}
+
+/* CONTENT containers */
+.article {
+  /* height: 100%;
+  width: 100%; 
+  flex: 1 auto;
+  */
+  flex: 1 1 0px;
+  transition: ease-in-out 0.2s;
+  display: flex;
+  flex-direction: row;
+}
+
+/* .article:hover {
+  padding: 0.5em;
+} */
+
+#container-disc {
+  background-color: rgb(118, 187, 119);
+}
+
+#container-tijd {
+  background-color: rgb(125, 131, 244);
+}
+
+/* COVER */
+.image-cover {
+  width: 100%;
+  height: 100%;
+  contain: size;
+}
+
+/* CONTENT */
+.section {
+  position: absolute;
+  width: 80vw;
+  max-height: calc(75vh - 2em);
+  overflow-y: scroll;
+  padding: 2em;
+}
+
+.section a {
+  color: rgb(230, 230, 230);
+  font-size: 1.5em;
+  text-decoration: none;
+  margin-right: 0.5em;
+}
+
+.section a:hover {
+  text-shadow: 0px 0px 20px black;
+  text-decoration: underline;
+}
+
+/* #discography-content {
+  background-color: rgb(118, 187, 119);
+}
+
+#rubbertijd-content {
+  background-color: rgb(125, 131, 244);
+} */
+
+#mix-container {
+  position: fixed;
+  bottom: 1em;
+  width: 70vw;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#btn-random {
+  flex: 1 1 0px;
+  margin: 0 0.5em;
+  padding: 0.5em;
+  border: 0px;
+  border-radius: 0.3em;
+  min-width: 8em;
+}
+
+#media-player {
+  flex: 5 1 100px;
+  margin: 0 0.5em;
+  background-color: antiquewhite;
+  box-shadow: 0 0 5px antiquewhite;
+}
+
+/* GENERAL */
+.hide {
+  display: none;
+}
