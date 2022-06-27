@@ -1,5 +1,5 @@
 /* reset/normalizer by https://piccalil.li/blog/a-modern-css-reset/ */
-@import url("https://fonts.googleapis.com/css2?family=Gilda+Display&family=Gothic+A1:wght@200;300;400;500&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Gilda+Display&family=Gothic+A1:wght@200;300;400;500&display=swap"); */
 
 /* Box sizing rules */
 *,
@@ -84,19 +84,12 @@ body {
 #main-container {
   display: flex;
   flex-direction: column;
-  /* background-color: aqua; */
   width: 100vw;
   height: 100vh;
 }
 
-#container-header {
-  /* background-color: grey; */
-}
-
 #container-content {
   display: flex;
-  /* background-color: darkgrey; */
-  /* flex-direction: row; */
 }
 
 .main-item {
@@ -120,10 +113,6 @@ body {
   flex-direction: row;
 }
 
-/* .article:hover {
-  padding: 0.5em;
-} */
-
 #container-disc {
   background-color: rgb(118, 187, 119);
 }
@@ -143,7 +132,7 @@ body {
 .section {
   position: absolute;
   width: 80vw;
-  max-height: calc(75vh - 2em);
+  max-height: 80vh;
   overflow-y: scroll;
   padding: 2em;
 }
@@ -156,43 +145,49 @@ body {
 }
 
 .section a:hover {
-  text-shadow: 0px 0px 20px black;
+  /* text-shadow: 0px 0px 20px #ffffff; */
+  background-color: antiquewhite;
+  color: black;
   text-decoration: underline;
 }
 
-/* #discography-content {
-  background-color: rgb(118, 187, 119);
+#playlist-container {
+  padding-bottom: 2em;
 }
 
-#rubbertijd-content {
-  background-color: rgb(125, 131, 244);
-} */
-
-#mix-container {
+.player-container {
   position: fixed;
-  bottom: 1em;
-  width: 70vw;
-  height: 5vh;
+  bottom: 0em;
+  width: 80vw;
+  height: 4em;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  align-items: center;
+
+  padding: 2em;
+}
+
+#player-disc {
+  background-color: rgb(118, 187, 119);
+  left: 0;
+}
+
+#player-tijd {
+  background-color: rgb(125, 131, 244);
+  right: 0em;
 }
 
 #btn-random {
-  flex: 1 1 0px;
-  margin: 0 0.5em;
   padding: 0.5em;
+  margin-right: 1em;
   border: 0px;
   border-radius: 0.3em;
   min-width: 8em;
 }
 
-#media-player {
-  flex: 5 1 100px;
-  margin: 0 0.5em;
-  background-color: antiquewhite;
-  box-shadow: 0 0 5px antiquewhite;
+#bc-player {
+  mix-blend-mode: lighten;
 }
+/* Soundcloud player */
 
 /* GENERAL */
 .hide {
@@ -208,6 +203,7 @@ body {
   }
   .section {
     width: 100vw;
+    padding: 1em;
   }
   .section a {
     font-size: 1.2em;

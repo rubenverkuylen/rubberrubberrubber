@@ -14,30 +14,71 @@
   <body>
     <div id="main-container">
       <div id="container-header" class="main-item grow">
-        <img src="img/cover-rubber.png" alt="cover" class="image-cover" />
+        <img
+          src="img/cover-rubber.png"
+          alt="cover"
+          id="cover-rubber"
+          class="image-cover"
+        />
       </div>
       <div id="container-content" class="main-item">
         <div id="container-disc" class="article">
-          <img src="img/cover-disc.png" alt="cover" class="image-cover" />
+          <img
+            src="img/cover-disc.png"
+            alt="cover"
+            id="cover-disc"
+            class="image-cover"
+          />
           <div id="discography-content" class="section hide">
-            <a href="">World Of Rubber 1 (Rubber001)</a><br />
-            <a href="">World Of Rubber 2 (Rubber002)</a><br />
-            <a href="">World of Rubber 3 (Rubber003)</a><br />
-            <a href="">Leuk en Ko - Monniken In 't riet (Rubber004)</a><br />
-            <a href="">Funky Sobrietas - Maria (Rubber005)</a><br />
-            <a href="">J A - Enter JA (Rubber006)</a><br />
-            <a href="">UVB76 - BAKARA (Rubber007)</a><br />
-            <a href="">MINIGOD - De Bus (Rubber008)</a><br />
-            <a href="">
-              Juzer - Layer Of Moleman (Unit Moebius Anonymous Remix)
-              Rubber009</a
-            >
+            <div class="playlist-container" id="playlist-disc">
+              <a href="" trackid="3265928709">World Of Rubber 1 (Rubber001)</a
+              ><br />
+              <a href="" trackid="921560259">World Of Rubber 2 (Rubber002)</a
+              ><br />
+              <a href="" trackid="3833988924">World of Rubber 3 (Rubber003)</a
+              ><br />
+              <a href="" trackid="694116900"
+                >Leuk en Ko - Monniken In 't riet (Rubber004)</a
+              ><br />
+              <a href="" trackid="2861952841"
+                >Funky Sobrietas - Maria (Rubber005)</a
+              ><br />
+              <a href="" trackid="2833361006">J A - Enter JA (Rubber006)</a
+              ><br />
+              <a href="" trackid="24286711">UVB76 - BAKARA (Rubber007)</a><br />
+              <a href="" trackid="2886784450">MINIGOD - De Bus (Rubber008)</a
+              ><br />
+              <a href="" trackid="1253095936"
+                >Juzer - Layer Of Moleman (Unit Moebius Anonymous Remix)
+                (Rubber009)</a
+              ><br />
+              <a href="" trackid="463077627"
+                >Juzer - Längre än Långtån (Rubber010)</a
+              >
+            </div>
+            <div class="player-container hide" id="player-disc">
+              <iframe
+                id="bc-player"
+                style="border: 0; width: 100%; height: 42px"
+                src="https://bandcamp.com/EmbeddedPlayer/album=463077627/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/"
+                seamless
+                ><a
+                  href="https://rubber-denhaag.bandcamp.com/album/la-ngre-a-n-la-ngta-n"
+                  >Längre än Långtån by skitungen</a
+                ></iframe
+              >
+            </div>
           </div>
         </div>
         <div id="container-tijd" class="article">
-          <img src="img/cover-tijd.png" alt="cover" class="image-cover" />
+          <img
+            src="img/cover-tijd.png"
+            alt="cover"
+            id="cover-rubber"
+            class="image-cover"
+          />
           <div id="rubbertijd-content" class="section hide">
-            <div id="playlist-container">
+            <div class="playlist-container" id="playlist-tijd">
               <a
                 class="sc-track"
                 href="https://soundcloud.com/rubber-6/rubber-tijd-with-lucy-cliche"
@@ -453,16 +494,17 @@
                 >Avant Garbage (k means & DJ ojo)</a
               >
             </div>
-            <div id="mix-container" class="hide">
-              <button id="btn-random">Random mix</button>
+            <div class="player-container hide" id="player-tijd">
+              <button id="btn-random" class="mix-element">Random mix</button>
               <iframe
                 id="sc-widget"
+                class="mix-element"
                 width="100%"
-                height="20"
+                height="20px"
                 scrolling="no"
                 frameborder="no"
                 allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1184401381&color=%2330312d&inverse=false&auto_play=true&show_user=true"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1184401381&color=%23000000&inverse=false&auto_play=false&show_user=true"
               ></iframe>
             </div>
           </div>
