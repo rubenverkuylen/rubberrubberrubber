@@ -125,11 +125,11 @@ body {
 }
 
 #container-disc {
-  background-color: var(--disc);
+  background-color: var(--rubber);
 }
 
 #container-tijd {
-  background-color: var(--tijd);
+  background-color: var(--rubber);
 }
 
 /* COVER */
@@ -149,7 +149,7 @@ body {
 }
 
 .section a {
-  color: var(--rubber);
+  color: var(--secondary);
   font-size: 1.5em;
   text-decoration: none;
   margin-right: 0.5em;
@@ -159,8 +159,8 @@ body {
 }
 
 .section a:hover {
-  background-color: var(--rubber);
-  color: var(--secondary);
+  background-color: var(--secondary);
+  color: var(--rubber);
 }
 
 #playlist-tijd {
@@ -178,35 +178,35 @@ body {
 }
 
 #player-disc {
-  background-color: var(--disc);
+  background-color: var(--rubber);
   left: 0;
 }
 
 #player-tijd {
-  background-color: var(--tijd);
-  right: 0em;
+  background-color: var(--rubber);
+  right: 0;
 }
 
 #btn-random {
-  background-color: var(--tijd);
-  color: var(--rubber);
+  background-color: var(--rubber);
+  color: var(--secondary);
   padding: 0.5em;
   margin-right: 1em;
-  border: 1px solid var(--rubber);
+  border: 1px solid var(--secondary);
   border-radius: 0.3em;
   min-width: 8em;
 }
 
 #btn-random:hover {
-  background-color: var(--rubber);
-  color: var(--tijd);
+  background-color: var(--secondary);
+  color: var(--rubber);
   cursor: pointer;
 }
 
 .loader {
   position: absolute;
   right: 0;
-  background: linear-gradient(90deg, var(--tijd), var(--rubber));
+  background: linear-gradient(90deg, rgb(0, 0, 0, 0), var(--rubber));
   background-size: 400% 400%;
   animation: gradient 1s ease infinite;
   width: 100%;
@@ -226,7 +226,7 @@ body {
 }
 
 #bc-player {
-  mix-blend-mode: lighten;
+  mix-blend-mode: darken;
 }
 
 /* GENERAL */
@@ -241,6 +241,7 @@ body {
 
 .active {
   background-color: var(--secondary);
+  color: var(--rubber);
 }
 
 @media screen and (max-width: 840px) {
