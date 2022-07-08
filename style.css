@@ -76,9 +76,17 @@ select {
   }
 }
 
+:root {
+  --rubber: rgb(250, 235, 215);
+  --disc: rgb(118, 187, 119);
+  --tijd: rgb(125, 131, 244);
+  --secondary: black;
+  --transec: ease-in-out 0.2s;
+}
+
 body {
-  font-family: "Gilda Display", Helvetica, sans-serif;
-  background-color: antiquewhite;
+  font-family: Helvetica, sans-serif;
+  background-color: var(--rubber);
 }
 
 #main-container {
@@ -94,13 +102,14 @@ body {
 
 .main-item {
   flex: 1 1 0px;
-  transition: ease-in-out 0.2s;
+  transition: var(--transec);
   height: 20vh;
 }
 
 .grow {
   flex: 4 1 0px !important;
-  height: 80vh;
+  /* height: 80vh; */
+  transition: var(--transec);
 }
 
 /* CONTENT containers */
@@ -110,17 +119,17 @@ body {
   flex: 1 auto;
   */
   flex: 1 1 0px;
-  transition: ease-in-out 0.2s;
+  transition: var(--transec);
   display: flex;
   flex-direction: row;
 }
 
 #container-disc {
-  background-color: rgb(118, 187, 119);
+  background-color: var(--disc);
 }
 
 #container-tijd {
-  background-color: rgb(125, 131, 244);
+  background-color: var(--tijd);
 }
 
 /* COVER */
@@ -140,7 +149,7 @@ body {
 }
 
 .section a {
-  color: rgb(230, 230, 230);
+  color: var(--rubber);
   font-size: 1.5em;
   text-decoration: none;
   margin-right: 0.5em;
@@ -150,8 +159,8 @@ body {
 }
 
 .section a:hover {
-  background-color: antiquewhite;
-  color: black;
+  background-color: var(--rubber);
+  color: var(--secondary);
 }
 
 #playlist-tijd {
@@ -160,48 +169,78 @@ body {
 
 .player-container {
   position: fixed;
-  bottom: 0em;
+  bottom: -4em;
   width: 80vw;
   height: 4em;
   display: flex;
   align-items: center;
-
   padding: 2em;
 }
 
 #player-disc {
-  background-color: rgb(118, 187, 119);
+  background-color: var(--disc);
   left: 0;
 }
 
 #player-tijd {
-  background-color: rgb(125, 131, 244);
+  background-color: var(--tijd);
   right: 0em;
 }
 
 #btn-random {
-  background-color: rgb(250, 235, 215, 0);
-  color: rgb(250, 235, 215, 0.8);
+  background-color: var(--tijd);
+  color: var(--rubber);
   padding: 0.5em;
   margin-right: 1em;
-  border: 1px solid rgb(250, 235, 215, 0.8);
+  border: 1px solid var(--rubber);
   border-radius: 0.3em;
   min-width: 8em;
 }
+
 #btn-random:hover {
-  background-color: rgb(250, 235, 215, 1);
-  color: rgb(125, 131, 244);
+  background-color: var(--rubber);
+  color: var(--tijd);
   cursor: pointer;
+}
+
+.loader {
+  position: absolute;
+  right: 0;
+  background: linear-gradient(90deg, var(--tijd), var(--rubber));
+  background-size: 400% 400%;
+  animation: gradient 1s ease infinite;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #bc-player {
   mix-blend-mode: lighten;
 }
-/* Soundcloud player */
 
 /* GENERAL */
 .hide {
   display: none;
+}
+
+.visible {
+  transform: translateY(-4em);
+  transition: var(--transec);
+}
+
+.active {
+  background-color: var(--secondary);
 }
 
 @media screen and (max-width: 840px) {

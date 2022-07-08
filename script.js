@@ -10,6 +10,7 @@ const discContent = document.querySelector("#discography-content");
 const tijdContent = document.querySelector("#rubbertijd-content");
 const section = document.querySelectorAll(".section");
 const cover = document.querySelectorAll(".image-cover");
+const links = document.getElementsByTagName("a");
 
 const plTijd = document.querySelector("#playlist-tijd");
 const plDisc = document.querySelector("#playlist-disc");
@@ -19,6 +20,7 @@ const allLinks = document.querySelectorAll(".sc-track");
 const rndBtn = document.querySelector("#btn-random");
 const widgetIframe = document.getElementById("sc-widget");
 const widget = SC.Widget(widgetIframe);
+const loader = document.querySelectorAll(".loader");
 
 // grow sections
 // 1. main container
@@ -57,10 +59,9 @@ const growArticle = function (e) {
 
 // playlist
 // BC reload iframe
-
 plDisc.addEventListener("click", function (e) {
   e.preventDefault();
-  document.getElementById("player-disc").classList.remove("hide");
+  document.getElementById("player-disc").classList.add("visible");
   const updatedURL = e.target.getAttribute("trackid");
   bcIframe.src = `https://bandcamp.com/EmbeddedPlayer/album=${updatedURL}/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/`;
   widget.pause();
@@ -68,25 +69,67 @@ plDisc.addEventListener("click", function (e) {
 
 // RUBBERTIJD reload iframe
 plTijd.addEventListener("click", function (e) {
+  if (e.target == plTijd) return;
   e.preventDefault();
-  document.getElementById("player-tijd").classList.remove("hide");
+  showLoader();
+  document.getElementById("player-tijd").classList.add("visible");
   const updatedURL = e.target.href;
   widget.load(updatedURL);
-  setTimeout(function () {
-    widget.play();
-  }, 500);
+
+  // start player
+  startPlayerOnLoad();
 });
 
 // random track
 const randomTrack = function () {
+  showLoader();
   document.getElementById("player-tijd").classList.remove("hide");
   const trackAr = [];
   allLinks.forEach((tr) => trackAr.push(tr));
   const randomNum = Math.floor(Math.random() * trackAr.length);
   widget.load(trackAr[randomNum].href);
-  setTimeout(function () {
-    widget.play();
-  }, 500);
+
+  allLinks.forEach((tr) => tr.classList.remove("active"));
+  trackAr[randomNum].classList.add("active");
+
+  // start player
+  startPlayerOnLoad();
+};
+
+// player
+// 1. start stop function
+const startPlayerOnLoad = function () {
+  const checkPlayerStatus = function () {
+    if (SC.Widget.Events.READY) {
+      widget.play();
+      stopInterval();
+      hideLoader();
+    }
+  };
+
+  const stopInterval = function () {
+    clearInterval(intervalPlayer);
+  };
+
+  const intervalPlayer = setInterval(checkPlayerStatus, 1000);
+};
+
+// 2. visiible
+const playerVisible = function () {};
+
+// 3. loaders
+const hideLoader = function () {
+  loader.forEach((loader) => loader.classList.add("hide"));
+};
+const showLoader = function () {
+  loader.forEach((loader) => loader.classList.remove("hide"));
+};
+
+// make link active
+const makeLinksActive = function (e) {
+  if (e.target == plTijd) return;
+  allLinks.forEach((tr) => tr.classList.remove("active"));
+  e.target.classList.add("active");
 };
 
 // event listeners
@@ -95,3 +138,4 @@ contHeader.addEventListener("click", growMain);
 contDisc.addEventListener("click", growArticle);
 contTijd.addEventListener("click", growArticle);
 rndBtn.addEventListener("click", randomTrack);
+plTijd.addEventListener("click", makeLinksActive);
