@@ -194,11 +194,11 @@ a {
 #btn-random {
   background-color: var(--rubber);
   color: var(--secondary);
-  padding: 0.5em;
+  padding: 0.5em 1em;
   margin-right: 1em;
   border: 1px solid var(--secondary);
   border-radius: 0.3em;
-  min-width: 8em;
+  /* min-width: 8em; */
 }
 
 #btn-random:hover {
@@ -254,6 +254,10 @@ a {
   }
   #container-content {
     flex-direction: column;
+  }
+  .player-container {
+    width: 100vw;
+    padding: 1em;
   }
   .section {
     width: 100vw;
