@@ -141,6 +141,7 @@ body {
 
 /* CONTENT */
 .section {
+  /* color: var(--secondary); */
   position: absolute;
   width: 80vw;
   max-height: 80vh;
@@ -148,14 +149,17 @@ body {
   padding: 2em;
 }
 
-.section a {
+a {
   color: var(--secondary);
+}
+
+.section a {
   font-size: 1.5em;
   text-decoration: none;
-  margin-right: 0.5em;
-  padding: 0.2em;
+  margin-right: 0em;
+  padding: 0.3em 0.4em;
   border: 0px;
-  border-radius: 0.3em;
+  border-radius: 0.4em;
 }
 
 .section a:hover {
