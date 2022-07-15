@@ -1,5 +1,5 @@
 /* reset/normalizer by https://piccalil.li/blog/a-modern-css-reset/ */
-/* @import url("https://fonts.googleapis.com/css2?family=Gilda+Display&family=Gothic+A1:wght@200;300;400;500&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600&display=swap');
 
 /* Box sizing rules */
 *,
@@ -23,8 +23,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul[role='list'],
+ol[role='list'] {
   list-style: none;
 }
 
@@ -80,12 +80,13 @@ select {
   --rubber: rgb(250, 235, 215);
   --disc: rgb(118, 187, 119);
   --tijd: rgb(125, 131, 244);
-  --secondary: black;
+  --secondary: rgb(40, 40, 40);
   --transec: ease-in-out 0.2s;
 }
 
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Gothic A1', Helvetica, sans-serif;
+  font-weight: 400;
   background-color: var(--rubber);
 }
 
@@ -125,36 +126,43 @@ body {
 }
 
 #container-disc {
-  background-color: var(--rubber);
+  background-color: none;
 }
 
 #container-tijd {
-  background-color: var(--rubber);
+  background-color: none;
 }
 
 /* COVER */
 .image-cover {
   width: 100%;
   height: 100%;
-  contain: size;
+}
+
+.svg-el {
+  fill: none;
+  stroke: var(--secondary);
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+}
+
+#cover-rubber {
+  height: 102%;
 }
 
 /* CONTENT */
 .section {
-  /* color: var(--secondary); */
   position: absolute;
   width: 80vw;
   max-height: 80vh;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   padding: 2em;
 }
 
-a {
+.link-track {
   color: var(--secondary);
-}
-
-.section a {
   font-size: 1.5em;
+  font-weight: 500;
   text-decoration: none;
   margin-right: 0em;
   padding: 0.3em 0.4em;
@@ -162,7 +170,7 @@ a {
   border-radius: 0.4em;
 }
 
-.section a:hover {
+.link-track:hover {
   background-color: var(--secondary);
   color: var(--rubber);
 }
@@ -265,5 +273,20 @@ a {
   }
   .section a {
     font-size: 1.2em;
+  }
+  .grow {
+    flex: 1 1 0px !important;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .section {
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .section a {
+    font-size: 2.2em;
   }
 }
