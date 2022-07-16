@@ -144,9 +144,23 @@ body {
 
 .svg-el {
   fill: none;
-  stroke: var(--secondary);
+  /* stroke: var(--secondary); */
   stroke-miterlimit: 10;
-  stroke-width: 3px;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  mix-blend-mode: darken;
+}
+#cover-rubber {
+  stroke: green;
+  height: 102%;
+}
+
+#cover-disc {
+  stroke: red;
+}
+#cover-tijd {
+  stroke: blue;
 }
 
 /* #cover-rubber {
