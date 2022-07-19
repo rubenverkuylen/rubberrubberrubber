@@ -1,5 +1,5 @@
 /* reset/normalizer by https://piccalil.li/blog/a-modern-css-reset/ */
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600&display=swap");
 
 /* Box sizing rules */
 *,
@@ -23,8 +23,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -85,7 +85,7 @@ select {
 }
 
 body {
-  font-family: 'Gothic A1', Helvetica, sans-serif;
+  font-family: "Gothic A1", Helvetica, sans-serif;
   font-weight: 400;
   background-color: var(--rubber);
 }
@@ -153,7 +153,7 @@ body {
 }
 #cover-rubber {
   stroke: green;
-  height: 102%;
+  height: 103%;
 }
 
 #cover-disc {
@@ -194,7 +194,7 @@ body {
 }
 
 #playlist-tijd {
-  padding-bottom: 2em;
+  margin-bottom: 4em;
 }
 
 .player-container {
@@ -278,7 +278,7 @@ body {
 @media screen and (max-width: 840px) {
   #main-container {
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
   }
   #container-header {
     display: none;
@@ -289,17 +289,31 @@ body {
   .player-container {
     width: 100vw;
     padding: 1em;
+    z-index: 99;
   }
   .section {
+    position: relative;
     width: 100vw;
     padding: 1em;
+    max-height: 200vh;
+    display: block;
   }
-  .section a {
-    font-size: 1.2em;
+  .article {
+    flex-direction: column;
+  }
+  .image-cover {
+    height: 15vh;
+    padding: 0.5em;
+  }
+  .link-track {
+    font-size: 0.9em;
   }
   .grow {
     /* flex: 1 1 0px !important; */
   }
+  /* .hide {
+    display: block;
+  } */
 }
 
 @media screen and (min-width: 840px) {
