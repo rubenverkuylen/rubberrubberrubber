@@ -144,7 +144,6 @@ body {
 
 .svg-el {
   fill: none;
-  /* stroke: var(--secondary); */
   stroke-miterlimit: 10;
   stroke-width: 4px;
   stroke-linecap: round;
@@ -163,16 +162,11 @@ body {
   stroke: blue;
 }
 
-/* #cover-rubber {
-  height: 102%;
-} */
-
 /* CONTENT */
 .section {
   position: absolute;
   width: 80vw;
   max-height: 80vh;
-  /* overflow-y: scroll; */
   padding: 2em;
   overflow-x: hidden;
 }
@@ -225,7 +219,6 @@ body {
   margin-right: 1em;
   border: 1px solid var(--secondary);
   border-radius: 0.3em;
-  /* min-width: 8em; */
 }
 
 #btn-random:hover {
@@ -308,12 +301,6 @@ body {
   .link-track {
     font-size: 0.9em;
   }
-  .grow {
-    /* flex: 1 1 0px !important; */
-  }
-  /* .hide {
-    display: block;
-  } */
 }
 
 @media screen and (min-width: 840px) {
