@@ -140,6 +140,7 @@ body {
   height: 100%;
   cursor: pointer;
   contain: size;
+  mix-blend-mode: darken;
 }
 
 .svg-el {
@@ -148,7 +149,6 @@ body {
   stroke-width: 4px;
   stroke-linecap: round;
   stroke-linejoin: round;
-  mix-blend-mode: darken;
 }
 #cover-rubber {
   stroke: green;
