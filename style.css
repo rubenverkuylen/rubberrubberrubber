@@ -301,6 +301,9 @@ body {
   .link-track {
     font-size: 0.9em;
   }
+  .grow {
+    flex: 1 1 0px;
+  }
 }
 
 @media screen and (min-width: 840px) {
