@@ -316,8 +316,19 @@ body {
     padding: 0.5em;
   }
   .link-track,
-  .buy-link {
+  .buy-link,
+  #btn-random {
     font-size: 0.9em;
+  }
+  #btn-random,
+  #sc-widget {
+    flex: 1 1 auto;
+  }
+  #btn-random {
+    padding: 0.3em;
+  }
+  #sc-widget {
+    max-width: 70%;
   }
 }
 
