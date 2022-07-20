@@ -1,5 +1,5 @@
 /* reset/normalizer by https://piccalil.li/blog/a-modern-css-reset/ */
-@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600&display=swap');
 
 /* Box sizing rules */
 *,
@@ -23,8 +23,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul[role='list'],
+ol[role='list'] {
   list-style: none;
 }
 
@@ -78,14 +78,14 @@ select {
 
 :root {
   --rubber: rgb(250, 235, 215);
-  --disc: rgb(118, 187, 119);
-  --tijd: rgb(125, 131, 244);
+  --disc: red;
+  --tijd: blue;
   --secondary: rgb(40, 40, 40);
   --transec: ease-in-out 0.2s;
 }
 
 body {
-  font-family: "Gothic A1", Helvetica, sans-serif;
+  font-family: 'Gothic A1', Helvetica, sans-serif;
   font-weight: 400;
   background-color: var(--rubber);
 }
@@ -140,15 +140,16 @@ body {
   height: 100%;
   cursor: pointer;
   contain: size;
-  mix-blend-mode: darken;
 }
 
 .svg-el {
   fill: none;
+  /* stroke: var(--secondary); */
   stroke-miterlimit: 10;
   stroke-width: 4px;
   stroke-linecap: round;
   stroke-linejoin: round;
+  mix-blend-mode: darken;
 }
 #cover-rubber {
   stroke: green;
@@ -162,16 +163,22 @@ body {
   stroke: blue;
 }
 
+/* #cover-rubber {
+  height: 102%;
+} */
+
 /* CONTENT */
 .section {
   position: absolute;
   width: 80vw;
   max-height: 80vh;
+  /* overflow-y: scroll; */
   padding: 2em;
   overflow-x: hidden;
 }
 
-.link-track {
+.link-track,
+.buy-link {
   color: var(--secondary);
   font-size: 1.5em;
   font-weight: 500;
@@ -184,6 +191,11 @@ body {
 
 .link-track:hover {
   background-color: var(--secondary);
+  color: var(--rubber);
+}
+
+.buy-link:hover {
+  background-color: var(--disc);
   color: var(--rubber);
 }
 
@@ -212,6 +224,10 @@ body {
   right: 0;
 }
 
+.buy-link {
+  font-weight: 300;
+}
+
 #btn-random {
   background-color: var(--rubber);
   color: var(--secondary);
@@ -219,6 +235,7 @@ body {
   margin-right: 1em;
   border: 1px solid var(--secondary);
   border-radius: 0.3em;
+  /* min-width: 8em; */
 }
 
 #btn-random:hover {
@@ -298,11 +315,9 @@ body {
     height: 15vh;
     padding: 0.5em;
   }
-  .link-track {
+  .link-track,
+  .buy-link {
     font-size: 0.9em;
-  }
-  .grow {
-    flex: 1 1 0px;
   }
 }
 
