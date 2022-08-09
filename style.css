@@ -199,24 +199,25 @@ body {
   color: var(--rubber);
 }
 
-#playlist-tijd {
-  margin-bottom: 4em;
+.playlist-container {
+  margin-bottom: 140px;
 }
 
 .player-container {
   position: fixed;
-  bottom: -4em;
+  bottom: -166px;
   width: 80vw;
-  height: 4em;
+  height: 166px;
   display: flex;
   align-items: center;
-  padding: 2em;
+  /* padding: 0.5em; */
   overflow-y: hidden;
 }
 
 #player-disc {
   background-color: var(--rubber);
   left: 0;
+  padding-left: 23px;
 }
 
 #player-tijd {
@@ -232,10 +233,9 @@ body {
   background-color: var(--rubber);
   color: var(--secondary);
   padding: 0.5em 1em;
-  margin-right: 1em;
+  margin: 0em 1em;
   border: 1px solid var(--secondary);
   border-radius: 0.3em;
-  /* min-width: 8em; */
 }
 
 #btn-random:hover {
@@ -267,7 +267,7 @@ body {
 }
 
 #bc-player {
-  mix-blend-mode: darken;
+  mix-blend-mode: normal;
 }
 
 /* GENERAL */
@@ -276,7 +276,7 @@ body {
 }
 
 .visible {
-  transform: translateY(-4em);
+  transform: translateY(-166px);
   transition: var(--transec);
 }
 
@@ -285,7 +285,7 @@ body {
   color: var(--rubber);
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 840px), screen and (orientation: portrait) {
   #main-container {
     overflow-x: hidden;
     overflow-y: auto;
@@ -315,6 +315,12 @@ body {
     height: 15vh;
     padding: 0.5em;
   }
+  .playlist-container {
+    margin-bottom: 0px;
+  }
+  #playlist-tijd {
+    margin-bottom: 166px;
+  }
   .link-track,
   .buy-link,
   #btn-random {
@@ -326,9 +332,13 @@ body {
   }
   #btn-random {
     padding: 0.3em;
+    /* max-width: 6em; */
   }
   #sc-widget {
     max-width: 70%;
+  }
+  .grow {
+    flex: 1 1 0px;
   }
 }
 
