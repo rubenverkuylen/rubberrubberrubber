@@ -298,10 +298,14 @@ body {
   }
   .player-container {
     width: 100vw;
-    padding: 1em;
+    /* padding: 1em; */
     z-index: 99;
   }
+  #player-disc {
+    padding-left: 0px;
+  }
   .section {
+    /* position: absolute; */
     position: relative;
     width: 100vw;
     padding: 1em;
@@ -338,7 +342,7 @@ body {
     max-width: 70%;
   }
   .grow {
-    flex: 1 1 0px;
+    flex: 1 1 0px !important;
   }
 }
 
