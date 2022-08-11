@@ -82,8 +82,9 @@ const indexLinks = function () {
 getDataPlaylist();
 
 const renderPlaylist = function (data) {
+  const scColor = "000000";
   const html = `
-  <a class="sc-track link-track" message="${data.message}" href="${data.url}">${data.name}</a> 
+  <a class="sc-track link-track" message="${data.message}" href="${data.url}?color=${scColor}">${data.name}</a> 
   `;
   plTijd.insertAdjacentHTML("beforeend", html);
 };
@@ -117,11 +118,18 @@ plDisc.addEventListener("click", function (e) {
   showPlayer(this.nextElementSibling);
 
   const updatedURL = e.target.getAttribute("trackid");
-  bcIframe.src = `https://bandcamp.com/EmbeddedPlayer/album=${updatedURL}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/`;
+  bcIframe.src = `https://bandcamp.com/EmbeddedPlayer/album=${updatedURL}/size=large/bgcol=ffffff/linkcol=000000/tracklist=false/artwork=small/transparent=true/`;
   widget.pause();
+  console.log(bcIframe.nextSibling);
 });
 
 // RUBBERTIJD/Soundcloud iframe loading
+const scOptions = {
+  color: "000000",
+  show_artwork: false,
+  show_user: true,
+};
+
 plTijd.addEventListener("click", function (e) {
   if (e.target == plTijd) return;
   e.preventDefault();
@@ -131,7 +139,7 @@ plTijd.addEventListener("click", function (e) {
   showPlayer(this.nextElementSibling);
 
   const updatedURL = e.target.href;
-  widget.load(updatedURL);
+  widget.load(updatedURL, scOptions);
 
   // stop Bandcamp player
   stopBCPlayer();
@@ -148,7 +156,7 @@ const randomTrack = function () {
   const trackAr = [];
   allSCLinks.forEach((tr) => trackAr.push(tr));
   const randomNum = Math.floor(Math.random() * trackAr.length);
-  widget.load(trackAr[randomNum].href);
+  widget.load(trackAr[randomNum].href, scOptions);
 
   allSCLinks.forEach((tr) => tr.classList.remove("active"));
   trackAr[randomNum].classList.add("active");
