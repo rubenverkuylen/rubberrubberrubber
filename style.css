@@ -87,6 +87,7 @@ select {
 body {
   font-family: "Gothic A1", Helvetica, sans-serif;
   font-weight: 400;
+  font-size: 16pt;
   background-color: var(--rubber);
 }
 
@@ -177,8 +178,7 @@ body {
   overflow-x: hidden;
 }
 
-.link-track,
-.buy-link {
+.link-track {
   color: var(--secondary);
   font-size: 1.5em;
   font-weight: 500;
@@ -191,11 +191,6 @@ body {
 
 .link-track:hover {
   background-color: var(--secondary);
-  color: var(--rubber);
-}
-
-.buy-link:hover {
-  background-color: var(--disc);
   color: var(--rubber);
 }
 
@@ -224,10 +219,6 @@ body {
 #player-tijd {
   background-color: var(--rubber);
   right: 0;
-}
-
-.buy-link {
-  font-weight: 300;
 }
 
 #btn-random {
@@ -287,10 +278,6 @@ body {
 }
 
 @media screen and (max-width: 840px), screen and (orientation: portrait) {
-  #main-container {
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
   #container-header {
     display: none;
   }
@@ -299,8 +286,8 @@ body {
   }
   .player-container {
     width: 100vw;
-    /* padding: 1em; */
     z-index: 99;
+    /* padding: 1em; */
   }
   #player-disc {
     padding-left: 0px;
@@ -324,12 +311,10 @@ body {
     margin-bottom: 0px;
   }
   #playlist-tijd {
-    margin-bottom: 166px;
+    margin-bottom: 120px;
   }
-  .link-track,
-  .buy-link,
-  #btn-random {
-    font-size: 0.9em;
+  body {
+    font-size: 8pt;
   }
   #btn-random,
   #sc-widget {
@@ -342,9 +327,9 @@ body {
   #sc-widget {
     max-width: 70%;
   }
-  .grow {
-    /* flex: 1 1 0px !important; */
-  }
+  /* .grow {
+    flex: 1 1 0px !important;
+  } */
 }
 
 @media screen and (min-width: 840px) {
@@ -359,7 +344,7 @@ body {
 }
 
 @media screen and (min-width: 1500px) {
-  .section a {
+  .link-track {
     font-size: 2.2em;
   }
 }
