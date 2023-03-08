@@ -15,10 +15,7 @@ const links = document.getElementsByTagName("a");
 const plTijd = document.querySelector("#playlist-tijd");
 const plDisc = document.querySelector("#playlist-disc");
 const playlistContainer = document.querySelectorAll(".playlist-container");
-// const mixCon = document.querySelector('#mix-container');
 const bcIframe = document.getElementById("bc-player");
-// const allLinks = document.querySelectorAll('.link-track'); // is indexed later
-// const allSCLinks = document.querySelectorAll('.sc-track'); // is indexed later
 const rndBtn = document.querySelector("#btn-random");
 const widgetIframe = document.getElementById("sc-widget");
 const loader = document.querySelectorAll(".loader");
@@ -84,7 +81,11 @@ getDataPlaylist();
 const renderPlaylist = function (data) {
   const scColor = "000000";
   const html = `
-  <a class="sc-track link-track" message="${data.message}" href="${data.url}?color=${scColor}">${data.name}</a> 
+  <a 
+    class="sc-track 
+    link-track" 
+    href="${data.url}?color=${scColor}">${data.name}
+  </a> 
   `;
   plTijd.insertAdjacentHTML("beforeend", html);
 };
@@ -190,10 +191,8 @@ const showLoader = function () {
 
 // make link active
 const makeLinksActive = function (e) {
-  // const allLinks = document.querySelectorAll('.link-track');
   const clicked = e.target.closest(".link-track");
   if (!clicked) return;
-  // if (e.target == plTijd || e.target == plDisc) return;
   allLinks.forEach((tr) => tr.classList.remove("active"));
   e.target.classList.add("active");
 };
