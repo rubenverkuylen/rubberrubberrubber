@@ -140,9 +140,10 @@ body {
 .svg-el {
   fill: none;
   stroke-miterlimit: 10;
-  stroke-width: 4px;
+  stroke-width: 5px;
   stroke-linecap: round;
   stroke-linejoin: round;
+  transition: 1s;
 }
 #cover-rubber {
   stroke: var(--rubber);
@@ -170,6 +171,7 @@ body {
   font-size: 1.3em;
   font-weight: 500;
   text-decoration: none;
+  margin-left: -0.25em;
   padding: 0.25em;
   border-radius: 0.4em;
 }
@@ -320,7 +322,7 @@ body {
   }
 }
 
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 841px) {
   .section {
     -ms-overflow-style: none; /* Internet Explorer 10+ */
     scrollbar-width: none; /* Firefox */
@@ -333,5 +335,11 @@ body {
 @media screen and (min-width: 1600px) {
   .link-track {
     font-size: 2.2em;
+  }
+  .svg-el {
+    stroke-width: 7px;
+  }
+  .playlist-container {
+    padding: 2em 2em 0em 2em;
   }
 }

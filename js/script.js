@@ -85,7 +85,7 @@ const renderPlaylist = function (data) {
     class="sc-track 
     link-track" 
     href="${data.url}?color=${scColor}">${data.name}
-  </a> 
+  </a>&nbsp; 
   `;
   plTijd.insertAdjacentHTML("beforeend", html);
 };
