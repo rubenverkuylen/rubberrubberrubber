@@ -264,11 +264,20 @@ body {
 }
 
 @media screen and (max-width: 840px), screen and (orientation: portrait) {
+  :root {
+    --cover: 80px;
+  }
+  .svg-el {
+    stroke-width: 3px;
+  }
   #container-header {
-    display: none;
+    position: fixed;
+    width: 100%;
+    height: var(--cover);
   }
   #container-content {
     flex-direction: column;
+    margin-top: var(--cover);
   }
   .player-container {
     width: 100%;
@@ -285,7 +294,7 @@ body {
     flex: 1 1 0px !important;
   }
   .image-cover {
-    height: 15vh;
+    height: var(--cover);
     padding: 0.5em;
   }
   .playlist-container {
@@ -302,11 +311,12 @@ body {
     flex: 1 1 auto;
   }
   #btn-random {
-    padding: 1.2em;
+    padding: 0.5em;
     font-size: 1.4em;
+    margin: 0em 0.7em;
   }
   #sc-widget {
-    max-width: 70%;
+    max-width: 65%;
   }
 }
 
