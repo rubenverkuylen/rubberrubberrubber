@@ -214,7 +214,7 @@ body {
   color: var(--secondary);
   padding: 0.5em 1em;
   margin: 0em 1em;
-  border: 1.5px solid var(--secondary);
+  border: 2px solid var(--secondary);
   border-radius: 0.4em;
 }
 

@@ -82,10 +82,8 @@ const renderPlaylist = function (data) {
   const scColor = "000000";
   const html = `
   <a 
-    class="sc-track 
-    link-track" 
-    href="${data.url}?color=${scColor}">${data.name}
-  </a>&nbsp; 
+    class="sc-track link-track" 
+    href="${data.url}?color=${scColor}">${data.name}</a>&nbsp; 
   `;
   plTijd.insertAdjacentHTML("beforeend", html);
 };
