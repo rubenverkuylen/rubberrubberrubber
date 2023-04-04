@@ -298,6 +298,8 @@ body {
   .image-cover {
     height: var(--cover);
     padding: 0.5em;
+    position: sticky;
+    top: 0;
   }
   .playlist-container {
     margin-bottom: 0px;
