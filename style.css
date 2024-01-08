@@ -140,10 +140,13 @@ body {
 .svg-el {
   fill: none;
   stroke-miterlimit: 10;
-  stroke-width: 5px;
+  stroke-width: 20px;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transition: 1s;
+  transition: 0.3s;
+}
+.article.grow .svg-el {
+  stroke-width: 5px;
 }
 #cover-rubber {
   stroke: var(--rubber);
@@ -331,6 +334,10 @@ body {
   }
   .section::-webkit-scrollbar {
     display: none; /* Safari and Chrome */
+  }
+  .image-cover:hover .svg-el {
+    transition: 0.1s;
+    stroke-width: 24px;
   }
 }
 
