@@ -1,0 +1,12 @@
+/* TEAM */
+	Client: Rubber
+
+	Concept, design and development: Ruben Verkuylen
+	Contact: info [at] rubenverkuylen.nl
+	From: The Hague, Netherlands
+
+/* SITE */
+	Last update: January 15 2024
+	Language: English
+	Doctype: HTML5
+	IDE: Visual Studio Code, FileZilla
