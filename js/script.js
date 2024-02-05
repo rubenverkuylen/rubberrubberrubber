@@ -114,6 +114,9 @@ plDisc.addEventListener("click", function (e) {
   if (clicked) e.preventDefault();
   if (!clicked) return;
 
+  plTijd.classList.remove("expand");
+  plDisc.classList.add("expand");
+
   showPlayer(this.nextElementSibling);
 
   const updatedURL = e.target.getAttribute("trackid");
@@ -132,6 +135,8 @@ const scOptions = {
 plTijd.addEventListener("click", function (e) {
   if (e.target == plTijd) return;
   e.preventDefault();
+  plDisc.classList.remove("expand");
+  plTijd.classList.add("expand");
 
   showLoader();
 

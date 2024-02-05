@@ -184,10 +184,6 @@ body {
   color: var(--background);
 }
 
-.playlist-container {
-  margin-bottom: 120px;
-}
-
 .player-container {
   position: fixed;
   bottom: -120px;
@@ -275,6 +271,9 @@ body {
   .svg-el {
     stroke-width: 3px;
   }
+  .article.grow .svg-el {
+    stroke-width: 10px;
+  }
   #container-header {
     position: fixed;
     width: 100%;
@@ -338,6 +337,9 @@ body {
   .image-cover:hover .svg-el {
     transition: 0.2s;
     stroke-width: 24px;
+  }
+  .expand {
+    margin-bottom: 100px;
   }
 }
 
