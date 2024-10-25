@@ -65,7 +65,7 @@ const getDataPlaylist = function () {
     .then((response) => {
       return response.json();
     })
-    .then((data) => {
+    .then((programme) => {
       for (const track of data) {
         renderPlaylist(track);
       }
