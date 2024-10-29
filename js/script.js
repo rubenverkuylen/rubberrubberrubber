@@ -53,6 +53,7 @@ const growArticle = function (e) {
     }, 200);
     discContent.classList.add("hide");
   }
+  // removeLinkClick();
 };
 
 //
@@ -212,3 +213,16 @@ playlistContainer.forEach((container) =>
 
 // if reference error > "soundcloud cannot be reached at the moment"
 const widget = SC.Widget(widgetIframe);
+
+// Add instagram
+//
+// const linkExternal = document.getElementById("link-external");
+
+// linkExternal.addEventListener("click", preventLinkClick, true);
+// function preventLinkClick(e) {
+//   e.preventDefault();
+// }
+
+// function removeLinkClick() {
+//   linkExternal.removeEventListener("click", preventLinkClick, true);
+// }

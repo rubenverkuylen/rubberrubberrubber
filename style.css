@@ -169,6 +169,11 @@ body {
   overflow-x: hidden;
 }
 
+#playlist-disc {
+  flex-direction: column-reverse;
+  display: flex;
+}
+
 .link-track {
   color: var(--secondary);
   font-size: 1.3em;
