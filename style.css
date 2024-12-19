@@ -78,10 +78,12 @@ select {
 
 :root {
   --background: rgb(250, 235, 215);
+  --background: rgb(0, 224, 15);
   --rubber: var(--secondary);
   --disc: var(--secondary);
   --tijd: var(--secondary);
   --secondary: rgb(40, 40, 40);
+  --secondary: rgb(215, 0, 0);
   --transec: ease-in-out 0.2s;
 }
 
@@ -134,7 +136,7 @@ body {
   height: 100%;
   cursor: pointer;
   contain: size;
-  mix-blend-mode: darken;
+  /* mix-blend-mode: darken; */
 }
 
 .svg-el {
